@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cnpj: MyString
+  tipo: MyString
+  nome: MyString
+  porte: MyString
+
+two:
+  cnpj: MyString
+  tipo: MyString
+  nome: MyString
+  porte: MyString
