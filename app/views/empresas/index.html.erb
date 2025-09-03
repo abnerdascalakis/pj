@@ -1,12 +1,30 @@
-<p style="color: green"><%= notice %></p>
 <% content_for :title, "Empresas" %>
-<h1>Empresas</h1>
-<div id="empresas">
-  <% @empresas.each do |empresa| %>
-    <%= render empresa %>
-    <p>
-      <%= link_to "Show this empresa", empresa %>
-    </p>
+
+<div class="container my-4">
+  <% if notice.present? %>
+    <div class="alert alert-success text-center" role="alert">
+      <%= notice %>
+    </div>
   <% end %>
+
+  <h1 class="mb-4 text-center">Empresas</h1>
+
+  <div id="empresas" class="row g-4">
+    <% @empresas.each do |empresa| %>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <%= render empresa %>
+          </div>
+          <div class="card-footer text-center">
+            <%= link_to "Sobre essa empresa", empresa, class: "btn btn-outline-primary btn-sm" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="text-center mt-4">
+    <%= link_to "➕ Nova empresa", new_empresa_path, class: "btn btn-success" %>
+  </div>
 </div>
-<%= link_to "New empresa", new_empresa_path %>

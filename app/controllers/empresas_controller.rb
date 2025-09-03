@@ -3,7 +3,8 @@ class EmpresasController < ApplicationController
 
   # GET /empresas or /empresas.json
   def index
-    @empresas = Empresa.all
+    @q = Empresa.ransack(params[:q])
+  @pagy, @empresas = pagy(@q.result)
   end
 
   # GET /empresas/1 or /empresas/1.json
@@ -67,4 +68,13 @@ class EmpresasController < ApplicationController
     def empresa_params
       params.require(:empresa).permit(:cnpj, :tipo, :nome, :porte)
     end
+def consulta_cnpj
+  cnpj = params[:cnpj]
+  @dados = CnpjService.consultar(cnpj)
+
+  respond_to do |format|
+    format.json { render json: @dados }
+    format.html
+  end
+end
 end
