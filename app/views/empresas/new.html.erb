@@ -1,7 +1,14 @@
-<% content_for :title, "New empresa" %>
-<h1>New empresa</h1>
-<%= render "form", empresa: @empresa %>
-<br>
-<div>
-  <%= link_to "Back to empresas", empresas_path %>
+<% content_for :title, "Nova Empresa" %>
+
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h1 class="fw-bold">Nova Empresa</h1>
+    <p class="text-muted">Preencha os dados abaixo para cadastrar uma nova empresa</p>
+  </div>
+
+  <%= render "form", empresa: @empresa %>
+
+  <div class="mt-3 text-center">
+    <%= link_to "Voltar", empresas_path, class: "btn btn-secondary" %>
+  </div>
 </div>
