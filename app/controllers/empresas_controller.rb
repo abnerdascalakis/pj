@@ -1,11 +1,13 @@
 class EmpresasController < ApplicationController
+  
   before_action :set_empresa, only: %i[ show edit update destroy ]
 
   # GET /empresas or /empresas.json
-  def index
-    @q = Empresa.ransack(params[:q])
-  @pagy, @empresas = pagy(@q.result)
-  end
+ def index
+  
+  @q = Empresa.ransack(params[:q])
+  @pagy, @empresas = pagy(@q.result(distinct: true), items: 5)  
+ end
 
   # GET /empresas/1 or /empresas/1.json
   def show

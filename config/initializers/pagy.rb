@@ -1,1 +1,3 @@
-require 'pagy/extras/bootstrap' if defined?(Pagy)
+require 'pagy/extras/bootstrap'
+
+Pagy::DEFAULT[:limit] = 2

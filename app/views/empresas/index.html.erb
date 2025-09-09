@@ -11,13 +11,14 @@
 
   <div id="empresas" class="row g-4">
     <% @empresas.each do |empresa| %>
+    
       <div class="col-md-4">
         <div class="card shadow-sm h-100">
           <div class="card-body">
             <%= render empresa %>
           </div>
           <div class="card-footer text-center">
-            <%= link_to "Sobre essa empresa", empresa, class: "btn btn-outline-primary btn-sm" %>
+            <%= link_to "+ Sobre empresa", empresa, class: "btn btn-outline-primary btn-sm" %>
           </div>
         </div>
       </div>
@@ -28,3 +29,7 @@
     <%= link_to "➕ Nova empresa", new_empresa_path, class: "btn btn-success" %>
   </div>
 </div>
+<div class="d-flex justify-content-center mt-4">
+  <%= pagy_bootstrap_nav(@pagy).html_safe %>
+</div>
+

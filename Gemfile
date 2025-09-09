@@ -61,4 +61,5 @@ gem "simple_form"
 gem "turbo-rails"
 gem "ransack"
 gem "pagy"
-gem 'httparty'
+gem "httparty"
+gem "byebug"
