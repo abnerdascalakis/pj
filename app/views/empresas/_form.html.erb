@@ -32,3 +32,37 @@
 <% end %>
 
 <div id="resultado" class="mt-3"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnBuscar = document.getElementById("buscar_cnpj");
+    const inputCnpj = document.getElementById("empresa_cnpj");
+    const divResultado = document.getElementById("resultado");
+
+    btnBuscar.addEventListener("click", () => {
+      const cnpj = inputCnpj.value.replace(/\D/g, ""); // limpa caracteres não numéricos
+
+      if (!cnpj) {
+        divResultado.innerHTML = `<div class="alert alert-warning">Digite um CNPJ válido.</div>`;
+        return;
+      }
+
+      fetch(`/empresas/consulta_cnpj/${cnpj}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.error) {
+            divResultado.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+          } else {
+            // Preenche os campos do form
+            if (data.razao_social) document.getElementById("empresa_nome").value = data.razao_social;
+            if (data.porte) document.getElementById("empresa_porte").value = data.porte;
+            if (data.tipo) document.getElementById("empresa_tipo").value = data.tipo;
+
+            divResultado.innerHTML = `<div class="alert alert-success">CNPJ encontrado e dados preenchidos!</div>`;
+          }
+        })
+        .catch(() => {
+          divResultado.innerHTML = `<div class="alert alert-danger">Erro ao consultar CNPJ.</div>`;
+        });
+    });
+  });
+</script>
