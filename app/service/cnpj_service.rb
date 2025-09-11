@@ -1,8 +1,8 @@
-require 'httparty'
+require "httparty"
 
 class CnpjService
   include HTTParty
-  base_uri 'https://brasilapi.com.br/api/cnpj/v1'
+  base_uri "https://brasilapi.com.br/api/cnpj/v1"
 
   def self.consultar(cnpj)
     response = get("/#{cnpj}")

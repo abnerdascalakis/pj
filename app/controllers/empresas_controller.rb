@@ -1,12 +1,11 @@
 class EmpresasController < ApplicationController
   before_action :set_empresa, only: %i[ show edit update destroy ]
 
-  # GET /empresas or /empresas.json
-  def index
-    @q = Empresa.ransack(params[:q])
-    @pagy, @empresas = pagy(@q.result(distinct: true))
-
-  end
+ # GET /empresas or /empresas.json
+ def index
+  @q = Empresa.ransack(params[:q])
+  @pagy, @empresas = pagy(@q.result(distinct: true), items: 5)
+ end
 
   # GET /empresas/1 or /empresas/1.json
   def show
@@ -58,7 +57,11 @@ class EmpresasController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+def consulta_cnpj
+  cnpj = params[:cnpj]
+  @empresa = CnpjService.consultar(cnpj)
+ render json: @empresa
+end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_empresa
@@ -69,13 +72,4 @@ class EmpresasController < ApplicationController
     def empresa_params
       params.require(:empresa).permit(:cnpj, :tipo, :nome, :porte)
     end
-def consulta_cnpj
-  cnpj = params[:cnpj]
-  @dados = CnpjService.consultar(cnpj)
-
-  respond_to do |format|
-    format.json { render json: @dados }
-    format.html
-  end
-end
 end
