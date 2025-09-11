@@ -1,0 +1,19 @@
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+/root/.asdf/installs/ruby/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-qsfn64 sitelibdir\=./.gem.20250903-3515-qsfn64 clean
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-qsfn64 sitelibdir\=./.gem.20250903-3515-qsfn64
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-qsfn64 sitelibdir\=./.gem.20250903-3515-qsfn64 install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250903-3515-qsfn64/debug
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-qsfn64 sitelibdir\=./.gem.20250903-3515-qsfn64 clean

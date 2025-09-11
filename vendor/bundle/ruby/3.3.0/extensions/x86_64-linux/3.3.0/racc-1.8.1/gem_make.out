@@ -1,0 +1,18 @@
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/root/.asdf/installs/ruby/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-n3f7vz sitelibdir\=./.gem.20250903-3515-n3f7vz clean
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-n3f7vz sitelibdir\=./.gem.20250903-3515-n3f7vz
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-n3f7vz sitelibdir\=./.gem.20250903-3515-n3f7vz install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20250903-3515-n3f7vz/racc
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-n3f7vz sitelibdir\=./.gem.20250903-3515-n3f7vz clean

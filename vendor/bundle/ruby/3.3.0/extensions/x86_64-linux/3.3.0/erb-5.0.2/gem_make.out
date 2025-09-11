@@ -1,0 +1,19 @@
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+/root/.asdf/installs/ruby/3.3.5/bin/ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-wrzllu sitelibdir\=./.gem.20250903-3515-wrzllu clean
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-wrzllu sitelibdir\=./.gem.20250903-3515-wrzllu
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-wrzllu sitelibdir\=./.gem.20250903-3515-wrzllu install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20250903-3515-wrzllu/erb
+
+current directory: /root/projetos/pj/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250903-3515-wrzllu sitelibdir\=./.gem.20250903-3515-wrzllu clean
